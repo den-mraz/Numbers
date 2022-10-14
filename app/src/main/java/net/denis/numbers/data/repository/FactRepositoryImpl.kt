@@ -1,18 +1,14 @@
 package net.denis.numbers.data.repository
 
-import net.denis.numbers.domain.model.ResponseData
+import net.denis.numbers.data.remote.NumbersApi
 import net.denis.numbers.domain.repository.FactRepository
 import javax.inject.Inject
 
 class FactRepositoryImpl @Inject constructor(
-
+    private val api: NumbersApi
 ): FactRepository {
 
-    override fun getFact(): ResponseData {
-        TODO("Not yet implemented")
-    }
-
-    override fun saveFact(responseData: ResponseData) {
-        TODO("Not yet implemented")
+    override suspend fun getFactByNumber(number: Int): String {
+        return api.getFactByNumber(number).toResponseData().fact
     }
 }
