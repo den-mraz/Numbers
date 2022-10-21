@@ -13,9 +13,9 @@ class SearchViewModel @Inject constructor(
 
     val numberList: MutableLiveData<String> = MutableLiveData()
 
-    fun getNumberFromVm(number: Int) {
+    fun getNumberFromVm(number: Int, type: String) {
             viewModelScope.launch {
-                numberList.value = getFactUseCase(number)?: "Check internet connection"
+                numberList.value = getFactUseCase(number, type)?: "Check internet connection"
             }
     }
 

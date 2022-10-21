@@ -4,5 +4,5 @@ import net.denis.numbers.domain.model.ResponseData
 
 interface FactRepository {
 
-    suspend fun getFactByNumber(number: Int): String
+    suspend fun getFactByNumber(number: Int, type: String): String
 }
