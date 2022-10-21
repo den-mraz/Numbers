@@ -8,7 +8,7 @@ class FactRepositoryImpl @Inject constructor(
     private val api: NumbersApi
 ): FactRepository {
 
-    override suspend fun getFactByNumber(number: Int): String {
-        return api.getFactByNumber(number).toResponseData().fact
+    override suspend fun getFactByNumber(number: Int, type: String): String {
+        return api.getFactByNumber(number, type).toResponseData().fact
     }
 }

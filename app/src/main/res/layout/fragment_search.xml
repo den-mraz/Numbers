@@ -6,10 +6,10 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSendNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Get fact"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -17,23 +17,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etCurrentNumber"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:hint="enter number"
+        android:inputType="phone"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintBottom_toTopOf="@+id/btnSendNumber"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerType"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewa"
+        android:id="@+id/tvResultFact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etCurrentNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:spinnerMode="dropdown"
+        android:id="@+id/spinnerType"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:entries="@array/factType"
+        app:layout_constraintBottom_toTopOf="@+id/btnSendNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvResultFact"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
