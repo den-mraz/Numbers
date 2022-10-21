@@ -64,7 +64,7 @@ class SearchFragment : Fragment() {
             return binding.etCurrentNumber.text.toString().toInt()
         }else {
             Toast.makeText(requireContext(), R.string.errorMessage, Toast.LENGTH_SHORT).show()
-            return 0
+            return (0..1000).random()
         }
     }
 }

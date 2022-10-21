@@ -3,6 +3,7 @@
     <string name="title_favorite">Понравившееся</string>
     <string name="title_search">Поиск</string>
     <string name="errorMessage">Please enter a number</string>
+    <string name="get_fact">Get fact</string>
 
     <string-array name="factType">
         <item>trivia</item>
