@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
 
     <Button
         android:id="@+id/btnSendNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get fact"
+        android:text="@string/get_fact"
+        android:background="@drawable/btn_get_fact"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -19,31 +21,39 @@
     <EditText
         android:id="@+id/etCurrentNumber"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_edit_text"
+        android:paddingStart="8dp"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/ic_app"
         android:ems="10"
-        android:hint="enter number"
+        android:hint="Enter a number"
         android:inputType="phone"
-        app:layout_constraintHorizontal_bias="1"
         app:layout_constraintBottom_toTopOf="@+id/btnSendNumber"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvResultFact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:paddingStart="12dp"
         app:layout_constraintBottom_toTopOf="@+id/etCurrentNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:spinnerMode="dropdown"
         android:id="@+id/spinnerType"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_edit_text"
         android:entries="@array/factType"
+        android:spinnerMode="dropdown"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintBottom_toTopOf="@+id/btnSendNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvResultFact"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/etCurrentNumber" />
 </androidx.constraintlayout.widget.ConstraintLayout>

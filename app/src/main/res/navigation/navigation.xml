@@ -6,10 +6,5 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="net.denis.numbers.ui.search.SearchFragment"
-        android:label="SearchFragment" />
-    <fragment
-        android:id="@+id/favoriteFragment"
-        android:name="net.denis.numbers.ui.favorite.FavoriteFragment"
-        android:label="FavoriteFragment" />
+        android:name="net.denis.numbers.ui.search.SearchFragment"/>
 </navigation>
